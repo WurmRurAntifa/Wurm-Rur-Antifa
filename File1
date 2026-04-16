@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wurm-Rur Antifa | Aktiv im Revier</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            background-color: #1a1a1a;
+            color: #eeeeee;
+        }
+        header {
+            background-color: #b30000;
+            color: white;
+            padding: 2rem;
+            text-align: center;
+            border-bottom: 5px solid #000;
+        }
+        nav {
+            background: #000;
+            padding: 0.5rem;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .container {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+        .card {
+            background: #262626;
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+            border-left: 5px solid #b30000;
+        }
+        h2 { color: #b30000; }
+        footer {
+            text-align: center;
+            font-size: 0.8rem;
+            padding: 2rem;
+            color: #777;
+        }
+        .btn {
+            display: inline-block;
+            background: #b30000;
+            color: white;
+            padding: 0.5rem 1rem;
+            text-decoration: none;
+            border-radius: 3px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Wurm-Rur Antifa</h1>
+    <p>Antifaschistische Aktion im Raum Wurm-Rur</p>
+</header>
+
+<nav>
+    <a href="#aktuelles">Aktuelles</a>
+    <a href="#ueber-uns">Über Uns</a>
+    <a href="#kontakt">Kontakt</a>
+</nav>
+
+<div class="container">
+    
+    <section id="aktuelles">
+        <h2>Aktuelle Meldungen</h2>
+        <div class="card">
+            <h3>Titel der Meldung</h3>
+            <p>Hier steht ein kurzer Anreißer für einen aktuellen Bericht oder eine Mobilisierung im Kreis Heinsberg / Aachen / Düren.</p>
+            <a href="#" class="btn">Mehr lesen</a>
+        </div>
+    </section>
+
+    <section id="ueber-uns">
+        <h2>Wer wir sind</h2>
+        <p>Wir sind eine Gruppe von Aktivist:innen aus der Region zwischen Wurm und Rur. Wir stehen ein für eine solidarische Gesellschaft und stellen uns rechtem Gedankengut konsequent entgegen.</p>
+    </section>
+
+    <section id="kontakt">
+        <h2>Kontakt</h2>
+        <div class="card">
+            <p>Du möchtest mitmachen oder hast Infos über rechte Umtriebe in der Region? Schreib uns sicher!</p>
+            <p><strong>E-Mail:</strong> kontakt@beispiel-domain.de</p>
+            <p><strong>PGP-Key:</strong> [Link zum Key]</p>
+        </div>
+    </section>
+
+</div>
+
+<footer>
+    <p>&copy; 2026 Wurm-Rur Antifa | Kein Gott, kein Staat, kein Vaterland.</p>
+</footer>
+
+</body>
+</html>
