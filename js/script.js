@@ -1,7 +1,46 @@
 // JavaScript für Interaktivität (kombiniert mit Bootstrap)
 
-// Navigation Highlight für aktuelle Seite
-document.addEventListener('DOMContentLoaded', function() {
+async function loadNavbar() {
+    const placeholder = document.getElementById('navbar-placeholder');
+    if (!placeholder) return;
+
+    try {
+        const navUrl = new URL('navbar.html', location.href);
+        console.log('Lade Navbar von', navUrl.href);
+        const resp = await fetch(navUrl);
+        if (!resp.ok) {
+            console.error('Navbar konnte nicht geladen werden:', resp.status);
+            placeholder.innerHTML = '<!-- Navbar konnte nicht geladen werden -->';
+            return;
+        }
+        const html = await resp.text();
+        placeholder.innerHTML = html;
+    } catch (err) {
+        console.error('Fehler beim Laden der Navbar:', err);
+    }
+}
+
+async function loadFooter() {
+    const placeholder = document.getElementById('footer-placeholder');
+    if (!placeholder) return;
+
+    try {
+        const footerUrl = new URL('footer.html', location.href);
+        console.log('Lade Footer von', footerUrl.href);
+        const resp = await fetch(footerUrl);
+        if (!resp.ok) {
+            console.error('Footer konnte nicht geladen werden:', resp.status);
+            placeholder.innerHTML = '<!-- Footer konnte nicht geladen werden -->';
+            return;
+        }
+        const html = await resp.text();
+        placeholder.innerHTML = html;
+    } catch (err) {
+        console.error('Fehler beim Laden des Footers:', err);
+    }
+}
+
+function initUI() {
     const currentPage = window.location.pathname.split('/').pop();
     const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
 
@@ -23,7 +62,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Tooltip-Initialisierung für Bootstrap (falls verwendet)
     const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
-    const tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+    tooltipTriggerList.map(function (tooltipTriggerEl) {
         return new bootstrap.Tooltip(tooltipTriggerEl);
     });
+}
+
+document.addEventListener('DOMContentLoaded', async function() {
+    await Promise.all([loadNavbar(), loadFooter()]);
+    initUI();
 });
