@@ -1,107 +1,128 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="de">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wurm-Rur Antifa | Aktiv im Revier</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            background-color: #1a1a1a;
-            color: #eeeeee;
-        }
-        header {
-            background-color: #b30000;
-            color: white;
-            padding: 2rem;
-            text-align: center;
-            border-bottom: 5px solid #000;
-        }
-        nav {
-            background: #000;
-            padding: 0.5rem;
-            text-align: center;
-        }
-        nav a {
-            color: white;
-            margin: 0 15px;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        .container {
-            max-width: 800px;
-            margin: 2rem auto;
-            padding: 0 1rem;
-        }
-        .card {
-            background: #262626;
-            padding: 1.5rem;
-            margin-bottom: 1rem;
-            border-left: 5px solid #b30000;
-        }
-        h2 { color: #b30000; }
-        footer {
-            text-align: center;
-            font-size: 0.8rem;
-            padding: 2rem;
-            color: #777;
-        }
-        .btn {
-            display: inline-block;
-            background: #b30000;
-            color: white;
-            padding: 0.5rem 1rem;
-            text-decoration: none;
-            border-radius: 3px;
-            margin-top: 10px;
-        }
-    </style>
+    <title>Wurm-Rur Antifa - Zentrale Startseite</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <a class="navbar-brand text-danger" href="index.html">Wurm-Rur Antifa</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Startseite</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="aktuelles.html">Aktuelles</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="highlights.html">Highlights</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="arbeitsgruppen.html">Arbeitsgruppen</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="stickersammlung.html">Stickersammlung</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
 
-<header>
-    <h1>Wurm-Rur Antifa</h1>
-    <p>Antifaschistische Aktion im Raum Wurm-Rur</p>
-</header>
+    <main>
+        <section class="hero text-white d-flex align-items-center justify-content-center" style="height: 100vh;">
+            <div class="container text-center">
+                <h1 class="display-4 text-danger">Gemeinsam f&uuml;r Gerechtigkeit und Solidarit&auml;t</h1>
+                <p class="lead">Die Wurm-Rur Antifa setzt sich f&uuml;r eine antifaschistische Gesellschaft ein. Engagiert, kraftvoll und unersch&uuml;tterlich.</p>
+                <a href="arbeitsgruppen.html" class="btn btn-danger btn-lg">Mehr erfahren</a>
+            </div>
+        </section>
 
-<nav>
-    <a href="#aktuelles">Aktuelles</a>
-    <a href="#ueber-uns">Über Uns</a>
-    <a href="#kontakt">Kontakt</a>
-</nav>
+        <section class="about py-5 bg-secondary">
+            <div class="container">
+                <h2 class="text-danger text-center mb-4">&Uuml;ber uns</h2>
+                <p class="text-center">Wir sind eine Gruppe engagierter Aktivist*innen, die sich gegen Faschismus, Rassismus und Ungerechtigkeit einsetzen. Unsere Arbeit umfasst Bildung, Proteste und Solidarit&auml;tsaktionen.</p>
+            </div>
+        </section>
 
-<div class="container">
-    
-    <section id="aktuelles">
-        <h2>Aktuelle Meldungen</h2>
-        <div class="card">
-            <h3>Titel der Meldung</h3>
-            <p>Aktuelles im Kreis Heinsberg / Aachen / Düren.</p>
-            <a href="#" class="btn">Mehr lesen</a>
+        <section class="features py-5 bg-dark">
+            <div class="container">
+                <h2 class="text-danger text-center mb-5">Unsere Schwerpunkte</h2>
+                <div class="row">
+                    <div class="col-md-6 col-lg-3 mb-4">
+                        <div class="card bg-secondary text-white h-100">
+                            <div class="card-body text-center">
+                                <h5 class="card-title text-danger">Aktuelles</h5>
+                                <p class="card-text">Bleiben Sie auf dem Laufenden mit unseren neuesten Beitr&auml;gen und Updates.</p>
+                                <a href="aktuelles.html" class="btn btn-danger">Zum Blog</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3 mb-4">
+                        <div class="card bg-secondary text-white h-100">
+                            <div class="card-body text-center">
+                                <h5 class="card-title text-danger">Highlights</h5>
+                                <p class="card-text">Entdecken Sie unsere besten Momente auf Instagram.</p>
+                                <a href="highlights.html" class="btn btn-danger">Zur Galerie</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3 mb-4">
+                        <div class="card bg-secondary text-white h-100">
+                            <div class="card-body text-center">
+                                <h5 class="card-title text-danger">Arbeitsgruppen</h5>
+                                <p class="card-text">Lernen Sie unsere verschiedenen Gruppen und ihre T&auml;tigkeiten kennen.</p>
+                                <a href="arbeitsgruppen.html" class="btn btn-danger">Mehr erfahren</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3 mb-4">
+                        <div class="card bg-secondary text-white h-100">
+                            <div class="card-body text-center">
+                                <h5 class="card-title text-danger">Stickersammlung</h5>
+                                <p class="card-text">Unsere Kollektion an Stickern f&uuml;r Solidarit&auml;t und Protest.</p>
+                                <a href="stickersammlung.html" class="btn btn-danger">Ansehen</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-dark text-white py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5 class="text-danger">Kontaktiere uns</h5>
+                    <p>Haben Sie Fragen oder möchten Sie sich engagieren? Schreiben Sie uns!</p>
+                    <p><i class="bi bi-envelope"></i> <a href="mailto:info@wurm-rur-antifa.de" class="text-white">info@wurm-rur-antifa.de</a></p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <h5 class="text-danger">Folgen Sie uns</h5>
+                    <a href="#" class="text-white me-3" aria-label="Instagram"><i class="bi bi-instagram fs-3"></i></a>
+                    <a href="#" class="text-white me-3" aria-label="TikTok"><i class="bi bi-tiktok fs-3"></i></a>
+                    <a href="mailto:info@wurm-rur-antifa.de" class="text-white" aria-label="Email"><i class="bi bi-envelope fs-3"></i></a>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="text-center">
+                <p>&copy; 2026 Wurm-Rur Antifa. Alle Rechte vorbehalten.</p>
+            </div>
         </div>
-    </section>
+    </footer>
 
-    <section id="ueber-uns">
-        <h2>Wer wir sind</h2>
-        <p>Wir sind eine Gruppe von Antifaschist:innen aus der Region zwischen Wurm und Rur. Wir stehen ein für eine solidarische Gesellschaft und stellen uns rechtem Gedankengut konsequent entgegen.</p>
-    </section>
-
-    <section id="kontakt">
-        <h2>Kontakt</h2>
-        <div class="card">
-            <p>Du möchtest mitmachen oder hast Infos über rechte Umtriebe in der Region? Schreib uns sicher!</p>
-            <p><strong>E-Mail:</strong> linke.flut.de@proton.me </p>
-            <p><strong>Instagram:</strong> [Link zum Insta-Profil]</p>
-        </div>
-    </section>
-
-</div>
-
-<footer>
-    <p>&copy; 2026 Wurm-Rur Antifa | Kein Gott, kein Staat, kein Vaterland.</p>
-</footer>
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
