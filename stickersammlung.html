@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="de">
 <head>
     <meta charset="UTF-8">
@@ -6,6 +6,22 @@
     <title>Stickersammlung - Wurm-Rur Antifa</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+    <style>
+        .sticker-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+        }
+        .card {
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(255, 0, 0, 0.3);
+        }
+    </style>
 </head>
 <body class="bg-dark text-white">
     <header>
@@ -15,40 +31,9 @@
     <main class="py-5">
         <div class="container">
             <h1 class="text-danger text-center mb-4">Stickersammlung</h1>
-            <p class="text-center mb-5">Unsere Kollektion an Stickern f&uuml;r Solidarit&auml;t und Protest.</p>
-            <div class="row">
-                <div class="col-md-6 col-lg-3 mb-4">
-                    <div class="card bg-secondary text-white h-100 text-center">
-                        <div class="card-body">
-                            <div style="height: 150px; background-color: #333; display: flex; align-items: center; justify-content: center; margin-bottom: 1rem;">Sticker 1</div>
-                            <p>Antifa Solidarit&auml;t</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3 mb-4">
-                    <div class="card bg-secondary text-white h-100 text-center">
-                        <div class="card-body">
-                            <div style="height: 150px; background-color: #333; display: flex; align-items: center; justify-content: center; margin-bottom: 1rem;">Sticker 2</div>
-                            <p>Gegen Faschismus</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3 mb-4">
-                    <div class="card bg-secondary text-white h-100 text-center">
-                        <div class="card-body">
-                            <div style="height: 150px; background-color: #333; display: flex; align-items: center; justify-content: center; margin-bottom: 1rem;">Sticker 3</div>
-                            <p>F&uuml;r Gerechtigkeit</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3 mb-4">
-                    <div class="card bg-secondary text-white h-100 text-center">
-                        <div class="card-body">
-                            <div style="height: 150px; background-color: #333; display: flex; align-items: center; justify-content: center; margin-bottom: 1rem;">Sticker 4</div>
-                            <p>Solidarit&auml;t</p>
-                        </div>
-                    </div>
-                </div>
+            <p class="text-center mb-5">Unsere Kollektion an Stickern für Solidarität und Protest.</p>
+            <div class="row" id="sticker-container">
+                <!-- Sticker werden hier eingefügt -->
             </div>
         </div>
     </main>
@@ -57,5 +42,39 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/script.js"></script>
+    <script>
+        // Sticker-Daten mit Bildpfaden
+        const stickers = [
+            { title: "Antifa Solidarität", imagePath: "images/sticker1.png" },
+            { title: "Gegen Faschismus", imagePath: "images/sticker2.png" },
+            { title: "Für Gerechtigkeit", imagePath: "images/sticker3.png" },
+            { title: "Solidarität", imagePath: "images/sticker4.png" },
+            { title: "Widerstand", imagePath: "images/sticker5.png" },
+            { title: "Keine Kompromisse", imagePath: "images/sticker6.png" },
+            { title: "Zusammenhalt", imagePath: "images/sticker7.png" },
+            { title: "Freiheit für Alle", imagePath: "images/sticker8.png" },
+            { title: "Antifaschistische Aktion", imagePath: "images/sticker9.png" },
+            { title: "Kämpfen & Siegen", imagePath: "images/sticker10.png" },
+            { title: "Selbstbestimmung", imagePath: "images/sticker11.png" },
+            { title: "Gerechtigkeit Jetzt", imagePath: "images/sticker12.png" },
+            { title: "Einheit & Kraft", imagePath: "images/sticker13.png" }
+        ];
+
+        // HTML für Sticker generieren
+        const container = document.getElementById('sticker-container');
+        stickers.forEach(sticker => {
+            const col = document.createElement('div');
+            col.className = 'col-md-6 col-lg-3 mb-4';
+            col.innerHTML = `
+                <div class="card bg-secondary text-white h-100 text-center">
+                    <div class="card-body">
+                        <img src="${sticker.imagePath}" alt="${sticker.title}" class="sticker-image" onerror="this.src='images/placeholder.png'">
+                        <p class="card-text">${sticker.title}</p>
+                    </div>
+                </div>
+            `;
+            container.appendChild(col);
+        });
+    </script>
 </body>
 </html>
